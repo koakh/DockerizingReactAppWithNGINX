@@ -10,6 +10,7 @@
       - [Test](#test)
   - [Use starter in other React Projects](#use-starter-in-other-react-projects)
   - [Use Private Registry with docker Images](#use-private-registry-with-docker-images)
+  - [Problem [WIP]](#problem-wip)
 
 ## Main Note File
 
@@ -75,30 +76,6 @@ copy files to target CRA project
 
 - [301 Moved Permanently](https://docs.npmjs.com/docker-and-private-modules)
 
-
-occurs in
-npm ci
-
-```shell
- ---> Running in 023971bafc3e
-npm ERR! Only HTTP(S) protocols are supported
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /root/.npm/_logs/2021-02-05T16_16_24_299Z-debug.log
-```
-
-RUN npm config set registry https://hub.critical-links.com:543
-
-
-https://stackoverflow.com/questions/8874363/npm-install-without-ssl
-
-
-https://medium.com/bb-tutorials-and-thoughts/dockerizing-react-app-with-nodejs-backend-typescript-version-55a40389b0ac
-
-https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose
-
-
-
 add `.npmrc`
 
 ```shell
@@ -143,3 +120,24 @@ COPY . ./
 # start app
 CMD ["npm", "start"]
 ```
+
+## Problem [WIP]
+
+occurs in
+npm ci
+
+```shell
+ ---> Running in 023971bafc3e
+npm ERR! Only HTTP(S) protocols are supported
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2021-02-05T16_16_24_299Z-debug.log
+```
+
+RUN npm config set registry https://hub.critical-links.com:543
+
+https://stackoverflow.com/questions/8874363/npm-install-without-ssl
+
+https://medium.com/bb-tutorials-and-thoughts/dockerizing-react-app-with-nodejs-backend-typescript-version-55a40389b0ac
+
+https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose
